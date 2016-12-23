@@ -1,0 +1,51 @@
+<div class="gis_Vc">
+    <table cellspacing="5" style="width:100%;">
+        <tr>
+            <td style="width:50px;" class="countTitle">
+                ${i18n.countTitle}:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div data-dojo-type="dijit/form/Button"
+                     data-dojo-props="busyLabel:'${i18n.busyLabel}',iconClass:'fa fa-plus'"
+                     data-dojo-attach-event="onClick:getCount">
+                    ${i18n.countButtonLabel}
+                </div>
+            </td>
+
+            <td style="width:100%">
+                <div data-dojo-attach-point="countResultTitle" class="countResult"  ></div>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="width:11850px;">
+                <div data-dojo-attach-point="queryLabel" class="queryTitle">${i18n.queryTitle}</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div data-dojo-type="dijit/form/TextBox"  style="width: 10em;"  data-dojo-attach-point="searchText"
+                     data-dojo-props="busyLabel:'${i18n.queryButtonLabel}',iconClass:'fa fa-question-circle'">
+                </div>
+            </td>
+            <td>
+                <div data-dojo-type="dijit/form/Button"
+                     data-dojo-props="busyLabel:'${i18n.queryButtonLabel}',iconClass:'fa fa-search'"
+                     data-dojo-attach-event="onClick:querySubstation">
+                    ${i18n.queryButtonLabel}
+                </div>
+            </td>
+
+
+
+        <tr>
+            <td>
+                <div data-dojo-attach-point="qResultTitle" class="resultsGrid" id="pLength">${i18n.queryResultTitle}</div>
+                <div data-dojo-attach-point="findResultsGrid" class="resultsGrid"></div>
+            </td>
+        </tr>
+
+    </table>
+</div>

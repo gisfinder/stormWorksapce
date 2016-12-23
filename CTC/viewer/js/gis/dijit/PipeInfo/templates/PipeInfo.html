@@ -1,0 +1,44 @@
+<div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="busyLabel:'${i18n.busyLabel}',iconClass:'fa fa-print fa-fw'" data-dojo-attach-event="onClick:queryFullNetwork" >
+        ${i18n.fullNetworkLabel}
+    </div>
+      <div  data-dojo-attach-point="pipeResultsNode" class="pipeResultsNode" style="display:block;">
+        <span id="qResult" class="resultTitle"> ${i18n.resultTitle}</span>
+        <div class="resultsContainer">
+        <table cellspacing="5" style="width:100%;">
+            <tr>
+                <td style="width:50px;">
+                    ${i18n.length}:
+                </td>
+                <td>
+                    <div data-dojo-attach-point="pipeLength" id="pLength"></div>
+               </td>
+           </tr>
+           <tr>
+               <td style="width:50px;">
+                    ${i18n.volume}:
+                </td>
+                <td>
+                    <div data-dojo-attach-point="pipeVolume" id="pVolume"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50px;">
+                    ${i18n.surfaceArea}:
+                </td>
+                <td>
+                    <div data-dojo-attach-point="pipeSurfaceArea" id="pSurface"></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:150px;">
+                    ${i18n.age}:
+                </td>
+                <td>
+                    <div data-dojo-attach-point="pipeAge" id="pAge"></div>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>

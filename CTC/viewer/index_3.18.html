@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>哈尔滨管网地图</title>
+        <link rel="stylesheet" href="http://10.50.51.67/arcgis_js_api_v318/arcgis_js_v318_api/arcgis_js_api/library/3.18/3.18/esri/css/esri.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/theme/dbootstrap/dbootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body class="dbootstrap">
+        <div class="appHeader">
+            <div class="headerLogo">
+                <img alt="logo" src="images/logo3.png" height="54" />
+            </div>
+            <div class="headerTitle">
+                <span id="headerTitleSpan">
+                   哈尔滨管网
+                </span>
+                <div id="subHeaderTitleSpan" class="subHeaderTitle">
+                   地图
+                </div>
+            </div>
+            <div class="search">
+                <div id='geocodeDijit'>
+                </div>
+            </div>
+            <div class="headerLinks">
+                <div id="helpDijit">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var dojoConfig = {
+                local:'en',
+                async: true,
+                packages: [{
+                    name: 'viewer',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/viewer'
+                },{
+                    name: 'config',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/config'
+                },{
+                    name: 'gis',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/gis'
+                }]
+            };
+        </script>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://10.50.51.67/js/lib/es5-shim.min.js"></script>
+        <![endif]-->
+        <script src="http://10.50.51.67/arcgis_js_api_v318/arcgis_js_v318_api/arcgis_js_api/library/3.18/3.18/init.js"></script>
+        <script type="text/javascript">
+            // get the config file from the url if present
+            var file = 'config/viewer', s = window.location.search, q = s.match(/config=([^&]*)/i);
+            if (q && q.length > 0) {
+                file = q[1];
+                if(file.indexOf('/') < 0) {
+                    file = 'config/' + file;
+                }
+            }
+            require(['viewer/Controller', file], function(Controller, config){
+
+                Controller.startup(config);
+            });
+        </script>
+    </body>
+</html>

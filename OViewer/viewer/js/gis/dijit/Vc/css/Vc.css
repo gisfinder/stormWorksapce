@@ -1,0 +1,42 @@
+.gis_Vc_IdentifyDijit {
+    width: 100%;
+}
+.gis_Vc .countTitle {
+    font-weight: bold;
+    display: inline;
+}
+.gis_Vc .resultTitle {
+    font-weight: bold;
+    margin: 10px;
+    display: none;
+}
+
+.gis_Vc .queryTitle {
+
+    font-weight: bold;
+    display: block;
+
+}
+
+.gis_Vc .resultsGrid {
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+    border-collapse: collapse;
+}
+
+.gis_Vc .cResultsGrid {
+    font-weight: bold;
+    display: none;
+}
+
+.gis_Vc .countResult {
+    font-weight: bold;
+    display: none;
+}
+
+
+.dijitTabContainer {
+    z-index: 0;
+    overflow-y: visible;
+}

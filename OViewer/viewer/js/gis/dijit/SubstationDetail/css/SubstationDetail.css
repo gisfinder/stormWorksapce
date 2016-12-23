@@ -1,0 +1,33 @@
+.gis_subStation .countTitle {
+    font-weight: bold;
+      display: inline;
+}
+.gis_subStation .resultTitle {
+    font-weight: bold;
+    margin: 10px;
+    display: none;
+}
+
+.gis_subStation .queryTitle {
+
+    font-weight: bold;
+    display: block;
+
+}
+
+.gis_subStation .resultsGrid {
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+    border-collapse: collapse;
+}
+
+.gis_subStation .cResultsGrid {
+    font-weight: bold;
+    display: none;
+}
+
+.gis_subStation .countResult {
+    font-weight: bold;
+    display: none;
+}

@@ -1,0 +1,29 @@
+ .gis_Valve .resultTitle {
+    font-weight: bold;
+    margin: 10px;
+    display: none;
+}
+
+.gis_Valve .queryTitle {
+
+    font-weight: bold;
+    display: block;
+
+}
+
+.gis_Valve .resultsGrid {
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+    border-collapse: collapse;
+}
+
+.gis_Valve .countResult {
+    font-weight: bold;
+    display: none;
+}
+
+ .gis_Valve .countTitle {
+     font-weight: bold;
+     display: inline;
+ }

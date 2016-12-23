@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <link rel="stylesheet"  href="http://localhost/arcgis_js_api/library/3.14/3.14/esri/css/esri.css">
+
+    <script>dojoConfig = {async: true, parseOnLoad: false}</script>
+    <script type="text/javascript"  data-dojo-config="async: true" src="http://localhost/arcgis_js_api/library/3.14/3.14/init.js"></script>
+
+    <script>
+        require(["dojo/topic", "dojo/dom", "dojo/on", "dojo/domReady!"],
+          function(topic, dom, on){
+
+              var handle = topic.subscribe("some/topic", function(e){
+                  dom.byId("output").innerHTML = "I received: " + e.msg;
+                  handle.remove();
+              });
+
+              on(dom.byId("publish"), "click", function(){
+                  topic.publish("some/topic", { msg: "hello world" });
+              });
+
+          });
+    </script>
+</head>
+<body class="claro">
+<button type="button" id="publish">Publish "some/topic"</button>
+<div id="output">Nothing Yet...</div>
+</body>
+</html>
